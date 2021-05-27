@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rC2-b3-vvs">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Won't rotate-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RotateAnimateDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tasi" translatesAutoresizingMaskIntoConstraints="NO" id="r5F-yK-ixI">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="r5F-yK-ixI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AbF-ao-BJ8"/>
+                            <constraint firstAttribute="trailing" secondItem="r5F-yK-ixI" secondAttribute="trailing" id="R1k-qu-Kzq"/>
+                            <constraint firstItem="r5F-yK-ixI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aJX-uc-gbT"/>
+                            <constraint firstAttribute="bottom" secondItem="r5F-yK-ixI" secondAttribute="bottom" id="bAg-xB-dby"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Won't rotate" image="xmark" catalog="system" id="wML-LS-nDu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1119" y="-130"/>
+        </scene>
+        <!--Rotate antimate-->
+        <scene sceneID="l1S-5E-3tH">
+            <objects>
+                <viewController storyboardIdentifier="RotateViewController" id="cWy-XB-zNR" customClass="RotateViewController" customModule="RotateAnimateDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sXa-ny-SNa">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="163" translatesAutoresizingMaskIntoConstraints="NO" id="JIv-NN-NOr">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pKe-wA-vDA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JIv-NN-NOr" firstAttribute="leading" secondItem="sXa-ny-SNa" secondAttribute="leading" id="EY4-gG-JLS"/>
+                            <constraint firstItem="JIv-NN-NOr" firstAttribute="bottom" secondItem="sXa-ny-SNa" secondAttribute="bottom" id="bUi-n6-q5t"/>
+                            <constraint firstItem="JIv-NN-NOr" firstAttribute="trailing" secondItem="sXa-ny-SNa" secondAttribute="trailing" id="iWP-LN-bF1"/>
+                            <constraint firstItem="JIv-NN-NOr" firstAttribute="top" secondItem="sXa-ny-SNa" secondAttribute="top" id="xKU-Dn-aIq"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Rotate antimate" image="rotate.3d" catalog="system" id="NWF-sN-A1F"/>
+                    <connections>
+                        <outlet property="myImageView" destination="JIv-NN-NOr" id="I3N-16-ZgJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CDR-fd-7IB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1118.840579710145" y="558.48214285714278"/>
+        </scene>
+        <!--Main Tab Bar View Controller-->
+        <scene sceneID="FKg-5z-3sR">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarViewController" automaticallyAdjustsScrollViewInsets="NO" id="rC2-b3-vvs" customClass="MainTabBarViewController" customModule="RotateAnimateDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D20-Sf-G7v">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="7fB-xg-ufx"/>
+                        <segue destination="cWy-XB-zNR" kind="relationship" relationship="viewControllers" id="0rY-rI-RIh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KCB-GB-vUL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13.043478260869566" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="163" width="2880" height="1800"/>
+        <image name="rotate.3d" catalog="system" width="128" height="121"/>
+        <image name="tasi" width="1011" height="1800"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
